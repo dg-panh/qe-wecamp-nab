@@ -1,7 +1,7 @@
 // Note: This file is the re-factored version of tests/simple.test.js
 // Note: Sut means System Under Test,
 // which saves us from having to give it a unique name each time
-import { add, addNoCheck } from '../src/simple';
+import { addTwoNumber, addNoCheck } from '../src/simple';
 
 // The tests were all repeating the same information, so extracting them out like this,
 // is truly practising the pricinple of DRY - Don't Repeat Yourself
@@ -25,6 +25,6 @@ const tests = [
 // and load in the test configuration into that test
 tests.forEach((config) => {
   test(`Adding ${config.inputs[0]} and ${config.inputs[1]} should equal ${config.expected}`, () => {
-    expect(add.apply(this, config.inputs)).toEqual(config.expected);
+    expect(addTwoNumber.apply(this, config.inputs)).toEqual(config.expected);
   });
 });
