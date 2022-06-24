@@ -1,5 +1,3 @@
-const myHeading = document.querySelector('h1');
-myHeading.textContent = 'Hello world!';
 
 let myImg = document.querySelector('img');
 myImg.onclick = function() {
